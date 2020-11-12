@@ -14,5 +14,6 @@ I intend for SixWords to not just be used by writers with writers-blocks, but I 
 Overall, a love of creativity and endless possibilities in the face of limitations is what motivates this application. 
 
 ## Project Status
-I am working on this project alone, as a personal-side project in-between classes at University, and as of November 11, 2020, I am just getting started designing and coding the project as a desktop application. I will update the README as I move further along in the process. So for now, there is no application to launch or load. My intention is to eventually make this a web application after I design the underlying function and model of the program.
-
+I am working on this project alone, as a personal-side project in-between classes at University, and as of November 11, 2020, I am just getting started designing and coding the project as a desktop application. I will update the README as I move further along in the process. So for now, there is no application to launch or load. My intention is to eventually make this a web application after I design the underlying function and model of the program.  
+  
+I am writing the program using Java for now. 
