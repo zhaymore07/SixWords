@@ -1,5 +1,5 @@
 # SixWords
-SixWords is a desktop Java application that is utilized by the user to create/ write six-word memoirs from randomly selected nouns, verbs, or moods. The Memoirs are stored in text files and are tracked and loaded into the system by the date that they were created and/or their title.
+SixWords is a creative writing tool that seeks to spark creativity through the challenge of writing a story, a pitch, or a memoir in six words or less. SixWords makes the six-word novel challenge a bit easier by generating randomly selected nouns, verbs, or a mood that should be incorporated into the story, providing a sort of prompt to help the user write. SixWords was developed with the goal of helping those who have writers-block or are in a slump creatively flex their creative muscles and hopefully provide inspirartion to those who need a challenge.   
 
 ## Motivation
 >The enemy of art is the absence of limitations.  
