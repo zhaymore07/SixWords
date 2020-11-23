@@ -148,4 +148,12 @@ public class Memoir {
 		return currentDate;
 	}
 	
+	/**
+	 * Gets and returns the String representation of the object to print to files.
+	 * @return a String representation of the Memoir object. 
+	 */
+	public String toString() {
+		return "-" + title + "," + story + "," + mandatoryWord;
+	}
+	
 }
