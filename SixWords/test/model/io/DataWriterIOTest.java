@@ -35,7 +35,19 @@ public class DataWriterIOTest {
 		assertEquals(title, validMemoir.getTitle());
 		assertEquals(validMandatoryWord, validMemoir.getMandatoryWord());
 		
+		
 		data.add(validMemoir);
+		
+		//Creates Memoir objects to put in LinkedList
+		String validStory2 = "In the hills Kara escaped freedom";
+		String validMandatoryWord2 = "Hills";
+		String title2 = "Second Memoir";
+		Memoir validMemoir2 = new Memoir(title2, validStory2, validMandatoryWord2);
+		assertEquals(validStory2, validMemoir2.getStory());
+		assertEquals(title2, validMemoir2.getTitle());
+		assertEquals(validMandatoryWord2, validMemoir2.getMandatoryWord());	
+		
+		data.add(validMemoir2);
 		
 		DataWriterIO.writeData("test-files/memoir1.txt", data);
 		
