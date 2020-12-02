@@ -34,7 +34,6 @@ public class DataReaderIO {
 			
 		} catch(FileNotFoundException e) {
 			
-			fileReader.close();
 			throw new IllegalArgumentException("File " + fileName + " cannot be opened");
 		}
 		
@@ -65,7 +64,6 @@ public class DataReaderIO {
 			fileReader = new Scanner(new File(fileName));
 			
 		} catch(FileNotFoundException e) {
-			fileReader.close();
 			throw new IllegalArgumentException("File " + fileName + " cannot be opened");
 		}
 		
