@@ -6,7 +6,7 @@ import model.util.LinkedList;
 
 /**
  * SixWordsManager acts as the container and manager class of the entire SixWords system. The SixWordsManager
- * knows its LinkedList of words, its LinkedList of memoirs, its WordGenerator object, and its single instance.
+ * knows its LinkedList of words, its LinkedList of memoirs, its WordGenerator object, and its singleton instance.
  * The SixWordsManager follows the Singleton design pattern by containing, controlling, and returning its singular instance
  * through its getInstance() method. 
  *  
@@ -60,8 +60,35 @@ public class SixWordsManager {
 		this.wordGenerator = new WordGenerator();
 	}
 	
+	/**
+	 * Utilizes the word generator object to randomly select a word from the passed LinkedList of string objects.
+	 * 
+	 * @return the mandatory word to put in the story
+	 */
+	public String generateWord() {
+		return wordGenerator.generateWord(words);
+	}
 	
+	/**
+	 * Creates and adds the memoir object to the LinkedList of memoirs in the system from the passed title, story, and mandatory word. 
+	 * An exception may be thrown from the Memoir class if the values are invalid. 
+	 * 
+	 * @param title the title of the Memoir
+	 * @param story the story portion of the memoir
+	 * @param mandatoryWord the mandatory word that should be included in the memoir. 
+	 */
+	public void addMemoir(String title, String story, String mandatoryWord) {
+		memoirs.add(new Memoir(title, story, mandatoryWord));
+	}
 	
+	/**
+	 * Removes a passed Memoir object from the system.
+	 * 
+	 * @param memoirToRemove the memoir to remove from the SixWords system. 
+	 */
+	public void removeMemoir(Memoir memoirToRemove) {
+		memoirs.remove(memoirs.indexOf(memoirToRemove));
+	}
 	
 	
 }
