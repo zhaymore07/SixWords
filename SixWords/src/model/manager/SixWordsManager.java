@@ -1,5 +1,7 @@
 package model.manager;
 
+import model.io.DataReaderIO;
+import model.io.DataWriterIO;
 import model.memoir.Memoir;
 import model.memoir.rng.WordGenerator;
 import model.util.LinkedList;
@@ -88,6 +90,35 @@ public class SixWordsManager {
 	 */
 	public void removeMemoir(Memoir memoirToRemove) {
 		memoirs.remove(memoirs.indexOf(memoirToRemove));
+	}
+	
+	/**
+	 * Saves the currently loaded/ stored memoirs in the system to a file specified through its file name, 
+	 * utilizing the DataWriterIO class. 
+	 * 
+	 * @param fileName the name of the file to store the information
+	 */
+	public void saveMemoirsToFile(String fileName) {
+		DataWriterIO.writeData(fileName, memoirs);
+	}
+	
+	/**
+	 * Reads in the memoirs currently stored on a file into the system. Overwrites any memoirs that are currently
+	 * saved in the system that are not saved on a file. 
+	 * 
+	 * @param fileName the file name to read the memoirs in from. 
+	 */
+	public void loadMemoirsFromFile(String fileName) {
+		memoirs = DataReaderIO.readDataMemoirs(fileName);
+	}
+	
+	/**
+	 * Reads in the String that are the mandatory words to be randomly selected for the memoirs.
+	 * 
+	 * @param fileName the file to read the words from. 
+	 */
+	public void loadWordsFromFile(String fileName) {
+		words = DataReaderIO.readDataWords(fileName);
 	}
 	
 	
