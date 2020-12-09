@@ -121,5 +121,40 @@ public class SixWordsManager {
 		words = DataReaderIO.readDataWords(fileName);
 	}
 	
+	/**
+	 * Gets and returns an Array of Memoir objects to be used by the GUI. 
+	 * 
+	 * @return an array of the Memoir objects currently in the system
+	 */
+	public Memoir[] getMemoirList() {
+		Memoir[] arrayOfMemoirs = new Memoir[memoirs.size()];
+		
+		for (int i = 0; i < memoirs.size(); i++) {
+			arrayOfMemoirs[i] = memoirs.get(i);
+		}
+		
+		return arrayOfMemoirs;
+	}
+	
+	/**
+	 * Gets and returns the Memoir object by its passed title. Returns null if the object does not exist. 
+	 * 
+	 * @param title the title of the Memoir to get
+	 * @return the Memoir object with the passed title or null if the Memoir object with the passed title does not exist.
+	 */
+	public Memoir getMemoirByTitle(String title) {
+		Memoir memoirToReturn = null; 
+		
+		for (int i = 0; i < memoirs.size(); i++) {
+			
+			if (memoirs.get(i).getTitle().equals(title)) {
+				memoirToReturn = memoirs.get(i);
+			}
+			
+		}
+		
+		return memoirToReturn;
+	}
+	
 	
 }

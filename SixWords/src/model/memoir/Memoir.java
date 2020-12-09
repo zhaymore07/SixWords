@@ -58,7 +58,7 @@ public class Memoir {
 	 * 
 	 * @param title the title of the memoir to set. 
 	 */
-	private void setTitle(String title) {
+	public void setTitle(String title) {
 		if (title == null || "".equals(title)) {
 			
 			this.title = currentDate.toString();
@@ -97,7 +97,7 @@ public class Memoir {
 	 * @throws IllegalArgumentException if the story contains more than 6 words or less than 1 word
 	 * @throws IllegalArgumentException if the mandatory word is not in the story. 
 	 */
-	private void setStory(String story) {
+	public void setStory(String story) {
 		if (story == null || "".equals(story)) {
 			throw new IllegalArgumentException("A memoir must contain at least 1 word");
 		}
