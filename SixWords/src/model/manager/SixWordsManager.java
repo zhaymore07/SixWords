@@ -68,7 +68,11 @@ public class SixWordsManager {
 	 * @return the mandatory word to put in the story
 	 */
 	public String generateWord() {
-		return wordGenerator.generateWord(words);
+		if (words.size() > 0) {
+			return wordGenerator.generateWord(words);
+		}
+		
+		return null; 
 	}
 	
 	/**
