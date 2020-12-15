@@ -1,4 +1,8 @@
 # SixWords
+<p align="center">
+<img width="360" height = "360" src="https://github.com/zhaymore07/SixWords/blob/main/SixWords/images/SixWords.png">
+  </p>
+
 SixWords is a creative writing tool that seeks to spark imagination through the challenge of writing a story, a pitch, or a memoir in six words or less. SixWords puts a twist on the six-word novel by randomly selecting nouns, verbs, or a mood that should be incorporated into the story. SixWords was developed with the goal of helping those who have writers-block or are in a slump exercise their creative muscles through providing inspirartion to those who need a challenge.   
 
 ## Motivation
@@ -14,6 +18,4 @@ I intend for SixWords to not just be used by writers with writers-block, but I t
 Overall, a love of creativity and endless possibilities in the face of limitations is what motivates this application. 
 
 ## Project Status
-I am working on this project alone, as a personal-side project in-between classes at University, and as of November 11, 2020, I am just getting started designing and coding the project as a desktop application. I will update the README as I move further along in the process. So for now, there is no application to launch or load. My intention is to eventually make this a web application after I design the underlying function and model of the program.  
-  
-I am writing the program using Java for now and intend to use this project as a way for me to get started using JavaFX. 
+I am working on this project alone, as a personal-side project in-between classes at University. As of 12/15/2020, I have implemented and tested my first iteration of the model classes and I am currently developing the GUI using Java Swing.  
