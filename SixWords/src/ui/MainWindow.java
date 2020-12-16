@@ -119,7 +119,7 @@ public class MainWindow extends JFrame implements ActionListener{
 		
 		if  (e.getActionCommand().equals("Create New Stories")) {
 			
-			
+			//TODO: Update with code to launch new window once the window has been created
 		
 		} else {
 			
@@ -140,6 +140,8 @@ public class MainWindow extends JFrame implements ActionListener{
 			} catch (Exception f) {
 				JOptionPane.showMessageDialog(this, "Error opening file.", "Opening Error", JOptionPane.ERROR_MESSAGE);
 			}
+			
+			//TODO: Update with code to launch new window once the window has been created
 			
 		}
 		
