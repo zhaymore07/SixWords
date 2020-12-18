@@ -117,11 +117,7 @@ public class MainWindow extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		if  (e.getActionCommand().equals("Create New Stories")) {
-			
-			//TODO: Update with code to launch new window once the window has been created
-		
-		} else {
+		if  (e.getActionCommand().equals("Load Stories From File")) {
 			
 			try {
 				SixWordsManager.getInstance().resetSystem();
@@ -141,13 +137,12 @@ public class MainWindow extends JFrame implements ActionListener{
 				JOptionPane.showMessageDialog(this, "Error opening file.", "Opening Error", JOptionPane.ERROR_MESSAGE);
 			}
 			
-			//TODO: Update with code to launch new window once the window has been created
-			
 		}
 		
-		 JComponent comp = (JComponent) e.getSource();
-		  Window win = SwingUtilities.getWindowAncestor(comp);
-		  win.dispose();
+		new HomeWindow();
+		JComponent comp = (JComponent) e.getSource();
+		Window win = SwingUtilities.getWindowAncestor(comp);
+		win.dispose();
 	}
 	
 	/**
