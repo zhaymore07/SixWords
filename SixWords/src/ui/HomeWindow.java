@@ -54,10 +54,10 @@ public class HomeWindow extends JFrame implements ActionListener, ListSelectionL
 	/**JButton to create stories*/
 	private JButton btnCreate;
 	
-	/**Jbutton to remove story*/
+	/**JButton to remove story*/
 	private JButton btnRemove;
 	
-	/**Jbutton to edit the story*/
+	/**JButton to edit the story*/
 	private JButton btnEdit;
 	
 	
@@ -113,13 +113,31 @@ public class HomeWindow extends JFrame implements ActionListener, ListSelectionL
 	
 	/**
 	 * ActionPerfomed method needed for the ActionListener interface. Performs the required action,
-	 * corresponding to the event that was triggered by the button pressed. Add button launches a prompt
-	 * to create a new Memoir, Delete button deletes the selected memoir object from the list, and Edit
+	 * corresponding to the event that was triggered by the specific button pressed. Add button launches a prompt
+	 * to create a new Memoir, Delete button deletes the selected memoir object from the list and refreshes the JList, and Edit
 	 * opens a prompt to edit the selected memoir.
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println(e.getActionCommand());
+		if (e.getActionCommand().equals("Create a New Story")) {
+			//TODO: Once Edit Dialog window is set up create it here
+			System.out.println("Create button pressed");
+			
+		} else if (e.getActionCommand().equals("Delete the Selected Story")) {
+			
+			String selectedTitle = listMemoirs.getSelectedValue();
+			
+			if (selectedTitle != null) {
+				
+				SixWordsManager.getInstance().removeMemoir(SixWordsManager.getInstance().getMemoirByTitle(selectedTitle));
+				refreshMemoirs();
+			} 
+			
+			System.out.println("Delete button pressed");
+		} else if (e.getActionCommand().equals("Edit the Selected Story")) {
+			//TODO: Once Edit dialog window is created link it here.
+			System.out.println("Edit button pressed");
+		}
 	}
 	
 	/**
